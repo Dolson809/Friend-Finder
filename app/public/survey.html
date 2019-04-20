@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Star Wars Friend Finder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Link static CSS -->
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+
+<body>
+
+        <div class="jumbotron container content">
+                <h1 class="display-4">Survey</h1>
+                <p class="lead"></p>
+                <hr class="my-4">
+                <p>Please answer all questions! 1 is strongly disagree, 5 is strongly agree!</p>
+              </div>
+              <div class="container content">
+        <form>
+            <div class="form-group">
+                <input id="name" type="text" class="form-control" placeholder="Name (Required)">
+            </div>
+            <div class="form-group">
+                <input id="photo" type="text" class="form-control" placeholder="Link to Profile Photo (Required)">
+            </div>
+            <div class="form-group">
+                <label for="question1">Is George Lucas good for Star Wars?</label>
+                <select class="form-control" id="q1">
+                    <option value="empty"></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question2">Did you enjoy the last Star Wars movie you attended?</label>
+                <select class="form-control" id="q2">
+                    <option value="empty"></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question3">How much do you agree with the Jedi</label>
+                <select class="form-control" id="q3">
+                    <option value="empty"></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question4">How much do you agree with the Sith</label>
+                <select class="form-control" id="q4">
+                    <option value="empty"></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question5">How likely are you to join the Empire</label>
+                <select class="form-control" id="q5">
+                    <option value="empty"></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question6">Should force Unleashed be made cannon?</label>
+                <select class="form-control" id="q6">
+                    <option value="empty"></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question7">Should Darth Maul have his own solo film?</label>
+                <select class="form-control" id="q7">
+                    <option value="empty"></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question8">What is you opinion on Porgs</label>
+                <select class="form-control" id="q8">
+                    <option value="empty"></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question9">Midi-chlorians are a valid way to measure force abilities.</label>
+                <select class="form-control" id="q9">
+                    <option value="empty"></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="question10">The Sith are the actual good guys.</label>
+                <select class="form-control" id="q10">
+                    <option value="empty"></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+        </form>
+        <div class="text-center">
+            <button id="submitBtn" type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+        </div>
+
+        <div id="bestFriendModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title">Your New Best Friend</h1>
+                    </div>
+                    <div class="modal-body">
+                        <h2 id="bestFriend"></h2>
+                        <img id="bestFriendPhoto" src="#">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <footer>
+        <div class="container">
+            <a href="/api/friends">Star Wars Friends API</a>
+            <span>|</span>
+            <a href="https://github.com/Dolson809/Friend-Finder">GitHub Repo</a>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+<script type="text/javascript">
+    $("#submitBtn").on("click", function (event) {
+        event.preventDefault();
+
+        var valid = true;
+        if ($("#name").val() === "" || $("#photo").val() === "") 
+        {
+            valid = false;
+        } else if ($("#q1").val() === "empty" || $("#q2").val() === "empty" || $("#q3").val() === "empty" || $("#q4").val() === "empty" || $("#q5").val() === "empty" || $("#q6").val() === "empty" || $("#q7").val() === "empty" || $("#q8").val() === "empty" || $("#q9").val() === "empty" || $("#q10").val() === "empty") 
+        {
+            valid = false;
+        }
+        if (valid === true) {
+            var newUser = {
+                name: $("#name").val().trim(),
+                photo: $("#photo").val().trim(),
+                scores: [
+                    $("#q1").val(),
+                    $("#q2").val(),
+                    $("#q3").val(),
+                    $("#q4").val(),
+                    $("#q5").val(),
+                    $("#q6").val(),
+                    $("#q7").val(),
+                    $("#q8").val(),
+                    $("#q9").val(),
+                    $("#q10").val()
+                ]
+            };
+            var currentURL = window.location.origin;
+            $.post(currentURL + "/api/friends", newUser, function (data) {
+                $("#bestFriend").text(data.name);
+                $("#bestFriendPhoto").attr("src", data.photo);
+                $("#bestFriendModal").modal("toggle");
+            });
+        } else {
+            alert("Survey is incomplete!");
+        }
+    });
+</script>
