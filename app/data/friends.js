@@ -69,7 +69,7 @@ var friends = [
 },
 
 {
-    "name": "AhmJar Jar Binksed",
+    "name": "Jar Jar Binksed",
         "photo": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4b/Jjportrait.jpg/220px-Jjportrait.jpg",
             "scores": [
                 3,
